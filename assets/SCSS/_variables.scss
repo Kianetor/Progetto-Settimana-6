@@ -1,29 +1,36 @@
-$brand-primary:    hsl(20, 20%, 15%); // navbar
-$brand-secondary:  hsl(20, 30%, 35%); // marrone più chiaro usato per i bottoni e le icone
-$text-light:       hsl(0, 0%, 100%);
-$text-muted-dark:  hsl(40, 30%, 90%); // Caratteri chiari
-$radius-base:      4px;
+$brand-primary: hsl(20, 20%, 15%); // navbar
+$brand-secondary: hsl(20, 30%, 35%); // marrone più chiaro usato per i bottoni e le icone
+$text-light: hsl(0, 0%, 100%);
+$text-muted-dark: hsl(40, 30%, 90%); // Caratteri chiari
+$radius-base: 4px;
 
+// Tema scuro
+
+$dark-bg-main: hsl(20, 15%, 10%);
+$dark-bg-card: hsl(20, 15%, 14%);
+$dark-text-muted: hsl(20, 10%, 75%);
 
 @mixin card-elevata {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: translateY(-5px);
-  }
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .bg-primary {
-  background-color: $brand-secondary !important;
+    background-color: $brand-secondary !important;
 }
+
 .text-primary {
-  color: $brand-secondary !important;
+    color: $brand-secondary !important;
 }
 
 .bg-light {
-  background-color: white !important;
+    background-color: white !important;
 }
 
 .bg-white {
-  background-color: hsl(20, 15%, 97%) !important;
+    background-color: hsl(20, 15%, 97%) !important;
 }

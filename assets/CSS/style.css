@@ -38,6 +38,33 @@ body {
 .main-navbar .nav-link:hover, .main-navbar .nav-link.active {
   color: hsl(0, 0%, 100%) !important;
 }
+.main-navbar .btn-theme {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.2s ease;
+}
+.main-navbar .btn-theme .theme-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: hsl(0, 0%, 100%);
+}
+.main-navbar .btn-theme:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+@media (min-width: 768px) {
+  .main-navbar {
+    padding: 1.2rem 0;
+  }
+  .main-navbar .btn-theme .theme-text {
+    font-size: 0.8rem;
+  }
+  .main-navbar .navbar-collapse {
+    margin-right: 1.5rem;
+  }
+}
 .main-navbar .custom-toggler {
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
   padding: 0.25rem 0.5rem;
@@ -57,7 +84,7 @@ body {
 .hero-section {
   background-color: hsl(20, 30%, 35%);
   min-height: 80vh;
-  padding: 4 rem 0;
+  padding: 4rem 0;
 }
 .hero-section .hero-title {
   font-size: 2.2rem;
@@ -69,31 +96,31 @@ body {
 @media (min-width: 768px) {
   .hero-section .hero-title {
     font-size: 2.4rem;
-    max-width: 95%;
+    max-width: 95% !important;
   }
 }
 @media (min-width: 1200px) {
   .hero-section .hero-title {
-    font-size: 3.2rem;
-    max-width: 70%;
+    font-size: 2.5rem;
+    max-width: 85% !important;
   }
 }
 .hero-section .hero-subtitle {
   font-size: 1rem;
   opacity: 0.9;
-  max-width: 320px;
+  max-width: 80%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
   .hero-section .hero-subtitle {
     font-size: 1.25rem;
-    max-width: 100%;
+    max-width: 90% !important;
   }
 }
 @media (min-width: 1200px) {
   .hero-section .hero-subtitle {
     font-size: 1.15rem;
-    max-width: 680px;
+    max-width: 80% !important;
   }
 }
 .hero-section .btn-cta {
@@ -108,7 +135,23 @@ body {
   background-color: hsl(20, 30%, 28%);
 }
 
+#servizi {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  background-color: hsl(20, 15%, 97%);
+  transition: background-color 0.3s ease;
+}
+#servizi h2 {
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+@media (min-width: 768px) {
+  #servizi h2 {
+    font-size: 1.8rem;
+  }
+}
 #servizi .custom-card {
+  background-color: hsl(0, 0%, 100%) !important;
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -116,16 +159,45 @@ body {
 #servizi .custom-card:hover {
   transform: translateY(-5px);
 }
+#servizi .custom-card {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 #servizi .custom-card .card-title {
   font-size: 1.15rem;
 }
+#servizi .custom-card .card-title {
+  color: hsl(20, 20%, 15%) !important;
+}
+#servizi .custom-card .card-text {
+  color: hsl(20, 10%, 75%) !important;
+}
+body.dark-mode #servizi {
+  background-color: hsl(20, 15%, 10%) !important;
+}
+body.dark-mode #servizi h2 {
+  color: hsl(0, 0%, 100%) !important;
+}
+body.dark-mode #servizi p.text-muted {
+  color: hsl(20, 10%, 75%) !important;
+}
+body.dark-mode #servizi .custom-card {
+  background-color: hsl(20, 15%, 14%) !important;
+}
+body.dark-mode #servizi .custom-card .card-title {
+  color: hsl(0, 0%, 100%) !important;
+}
+body.dark-mode #servizi .custom-card .card-text {
+  color: hsl(20, 10%, 75%) !important;
+}
 
-#contatti .form-control, #contatti .form-select {
+#contatti .form-control,
+#contatti .form-select {
   border-radius: 4px;
-  border: 1px solid ease-in-out;
+  border: 1px solid hsl(20, 10%, 25%);
   padding: 0.6rem 0.75rem;
 }
-#contatti .form-control:focus, #contatti .form-select:focus {
+#contatti .form-control:focus,
+#contatti .form-select:focus {
   border-color: hsl(20, 30%, 35%);
   box-shadow: 0 0 0 0.25rem rgba(116.025, 80.325, 62.475, 0.15);
 }
@@ -138,6 +210,28 @@ body {
 #contatti .btn-custom-submit:hover {
   background-color: hsl(20, 30%, 28%);
 }
+body.dark-mode #contatti {
+  background-color: hsl(20, 15%, 10%) !important;
+}
+body.dark-mode #contatti h2 {
+  color: hsl(0, 0%, 100%) !important;
+}
+body.dark-mode #contatti p.text-muted {
+  color: hsl(20, 10%, 75%) !important;
+}
+body.dark-mode #contatti .form-label {
+  color: hsl(0, 0%, 100%) !important;
+}
+body.dark-mode #contatti .form-control,
+body.dark-mode #contatti .form-select {
+  background-color: hsl(20, 15%, 14%) !important;
+  border-color: hsl(20, 10%, 25%);
+  color: hsl(0, 0%, 100%) !important;
+}
+body.dark-mode #contatti .form-control:focus,
+body.dark-mode #contatti .form-select:focus {
+  border-color: hsl(20, 30%, 35%);
+}
 
 .main-footer {
   background-color: hsl(20, 20%, 15%);
@@ -146,7 +240,8 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
-.main-footer p, .main-footer a {
+.main-footer p,
+.main-footer a {
   color: hsl(40, 30%, 90%) !important;
   transition: color 0.2s ease;
 }
