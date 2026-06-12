@@ -1,5 +1,5 @@
-$brand-primary:       hsl(20, 20%, 15%); // navbar
-$brand-secondary:       hsl(20, 30%, 35%); // marrone più chiaro usato per i bottoni e le icone
+$brand-primary:    hsl(20, 20%, 15%); // navbar
+$brand-secondary:  hsl(20, 30%, 35%); // marrone più chiaro usato per i bottoni e le icone
 $text-light:       hsl(0, 0%, 100%);
 $text-muted-dark:  hsl(40, 30%, 90%); // Caratteri chiari
 $radius-base:      4px;
@@ -21,5 +21,9 @@ $radius-base:      4px;
 }
 
 .bg-light {
+  background-color: white !important;
+}
+
+.bg-white {
   background-color: hsl(20, 15%, 97%) !important;
 }
