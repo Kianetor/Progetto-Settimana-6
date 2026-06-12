@@ -1,0 +1,25 @@
+$brand-primary:       hsl(20, 20%, 15%); // navbar
+$brand-secondary:       hsl(20, 30%, 35%); // marrone più chiaro usato per i bottoni e le icone
+$text-light:       hsl(0, 0%, 100%);
+$text-muted-dark:  hsl(40, 30%, 90%); // Caratteri chiari
+$radius-base:      4px;
+
+
+@mixin card-elevata {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.bg-primary {
+  background-color: $brand-secondary !important;
+}
+.text-primary {
+  color: $brand-secondary !important;
+}
+
+.bg-light {
+  background-color: hsl(20, 15%, 97%) !important;
+}

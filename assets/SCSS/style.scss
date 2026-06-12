@@ -15,3 +15,130 @@
 
 
 // === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
+
+
+@import 'variables';
+
+// Navbar
+.main-navbar {
+  background-color: $brand-primary;
+  padding: 1rem 0;
+
+  .navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-link {
+    color: rgba($text-light, 0.7) !important;
+    font-size: 1rem;
+    
+    &:hover, &.active {
+      color: $text-light !important;
+    }
+  }
+
+
+  // Pulsante mobile
+  .custom-toggler {
+    border: 2px solid rgba($text-light, 0.5) !important;
+    padding: 0.25rem 0.5rem;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// Hero
+.hero-section {
+  background-color: $brand-secondary;
+  min-height: 80vh;
+  
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    
+    @media (min-width: 768px) {
+      font-size: 3.8rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  // Il bottone "Inizia un progetto"
+  .btn-cta {
+    color: $text-light;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Servizi
+#servizi {
+  .custom-card {
+    border-radius: $radius-base;
+    @include card-elevata; // Utilizzo del mixin obbligatorio
+    
+    .card-title {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+// Contatti
+
+#contatti {
+  .form-control, .form-select {
+    border-radius: $radius-base;
+    border: 1px solid ease-in-out;
+    padding: 0.6rem 0.75rem;
+    
+    &:focus {
+      border-color: $brand-secondary;
+      box-shadow: 0 0 0 0.25rem rgba($brand-secondary, 0.15);
+    }
+  }
+  
+  .btn-custom-submit {
+    background-color: $brand-secondary;
+    border: none;
+    border-radius: $radius-base;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: darken($brand-secondary, 7%);
+    }
+  }
+}
+
+// Footer
+.main-footer {
+  background-color: $brand-primary;
+  
+  h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+  
+  p, a {
+    color: $text-muted-dark !important;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: $text-light !important;
+  }
+}
